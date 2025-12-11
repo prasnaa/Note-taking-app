@@ -5,7 +5,7 @@ import { Bell } from 'lucide-react'
 
 const DashNav = () => {
   return (
-    <div className='mt-6 mb-8 container mx-auto px-4'>
+    <div className='mt-6 mb-8 container mx-auto px-2'>
      <div className='flex justify-between items-center px-1.5'>
        <div>
           <h1>Welcome back, User</h1>
