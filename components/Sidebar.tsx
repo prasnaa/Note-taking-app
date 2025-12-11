@@ -2,7 +2,6 @@
 import clsx from 'clsx';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import path from 'path';
 import React from 'react'
 import { LayoutDashboard, LayoutTemplate, CalendarDays, AlarmClockCheck, Handshake, UserPen, Settings, NotebookTabs, LogOut, Power} from 'lucide-react';
 
