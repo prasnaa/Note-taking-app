@@ -11,7 +11,7 @@ const Sidebar = () => {
   const pathname = usePathname();
   
   return (
-   <div className=" w-64 bg-gray-100 border-r border-gray-300 px-4 pt-4 flex flex-col justify-between">
+   <div className=" hidden lg:flex  w-64 bg-gray-100 border-r border-gray-300 px-4 pt-4  flex-col justify-between">
       
       <div>
         <h1 className="text-1xl font-bold mb-10  flex gap-1.5 align-middle"> <NotebookTabs size={20} />My Note Book</h1>

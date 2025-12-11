@@ -1,11 +1,11 @@
 import React from 'react'
-import { Bell } from 'lucide-react'
+import { Bell, Plus } from 'lucide-react'
 
 
 
 const DashNav = () => {
   return (
-    <div className='mt-6 mb-8 container mx-auto px-2'>
+    <div className='  mt-6 mb-8 container mx-auto px-2'>
      <div className='flex justify-between items-center px-1.5'>
        <div>
           <h1>Welcome back, User</h1>
@@ -20,7 +20,7 @@ const DashNav = () => {
 
 
           <div className="mt-4 w-full">
-       <div className='max-w-full flex justify-between items-center py-4  '>
+       <div className='max-w-full flex flex-col gap-2 sm:gap-4 md:gap-6 lg:flex-row justify-between items-center py-4   '>
             <input
               type="text"
               placeholder="Search notes..."
@@ -28,7 +28,8 @@ const DashNav = () => {
               focus:ring focus:ring-blue-300" />
              <div className="flex space-x-4   ">
                 <div className="flex space-x-100 "></div>
-                  <button className="bg-blue-500 text-white py-2 px-4 mt-0.5 rounded-2xl hover:bg-blue-600">Create New Note</button>
+                  <button className=" lg:hidden bg-blue-500 text-white py-2 px-4 mt-0.5 rounded-2xl hover:bg-blue-600"><Plus/></button>
+                  <button className=" hidden lg:block bg-blue-500 text-white py-2 px-4 mt-0.5 rounded-2xl hover:bg-blue-600">Create New Note</button>
                   <select className="p-2 bg-gray-200 rounded-2xl hover:bg-gray-300">
                   <option>Sort by Priority</option>
                   <option>Sort by Title</option>
