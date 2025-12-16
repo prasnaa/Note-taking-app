@@ -37,15 +37,15 @@ const Sidebar = () => {
           </div>
           </Link>
 
-          <Link href={'/reminder'}>
-          <div className={clsx("p-3 bg-white rounded-lg flex gap-1.5 shodow-sm hover:bg-gray-200 cursor-pointer", pathname === '/reminder' ? "bg-transparent border-2 border-blue-500" : "bg-white")}>
+          <Link href={'/task'}>
+          <div className={clsx("p-3  rounded-lg flex gap-1.5 shodow-sm hover:bg-blue-400 cursor-pointer", pathname === '/reminder' ? " border-2 bg-blue-500 text-white" : "bg-white")}>
            <AlarmClockCheck size={19} /> Task Reminder
           </div>
           </Link>
 
 
-          <Link href={'/notes'}>
-          <div className={clsx("p-3 bg-white rounded-lg flex gap-1.5 shodow-sm hover:bg-gray-200 cursor-pointer", pathname === '/collaboration' ? "bg-transparent border-2 border-blue-500" : "bg-white")}>
+          <Link href={'/collaboration'}>
+          <div className={clsx("p-3 rounded-lg flex gap-1.5 shodow-sm hover:bg-blue-400 cursor-pointer", pathname === '/collaboration' ? " border-2 bg-blue-500  text-white" : "bg-white")}>
            <Handshake size={19}/> Collaboration 
           </div>
           </Link>
@@ -74,7 +74,7 @@ const Sidebar = () => {
           </div>
         </div>
       <div className="mt-10">
-        <button className="w-full bg-red-500 hover:bg-red-600 text-white py-2 rounded flex gap-1 justify-center items-center">
+        <button className="w-full bg-red-500 hover:bg-red-600 text-white py-2 rounded-xl flex gap-1 justify-center items-center">
         <LogOut size={19} /> Logout
         </button>
       </div>

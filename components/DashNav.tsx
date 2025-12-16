@@ -14,7 +14,7 @@ const DashNav = () => {
            <div className=" space-x-100">
   
            <Bell size={30} color="blue" className="cursor-pointer"/>
-           </div>
+          </div>
   
      </div>
 
