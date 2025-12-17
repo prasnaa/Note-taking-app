@@ -24,10 +24,17 @@ const Commentfeatures = () => {
 </div>
 
  {/* BOX-4 */}
-<div className="bg-gray-200 rounded-2xl p-6 h-65 w-xl mt-6">
-  <h3 className="font-medium">
+<div className="bg-blue-200 rounded-2xl p-8 h-65 w-xl mt-6">
+  <h3 className="font-medium text-blue-600">
     Real Time Collaboration Features
   </h3>
+  <ul className="list-disc list-inside text-blue-600 space-y-1">
+    <li>Live editing with multiple users</li>
+    <li>Instant comments and feedback</li>
+    <li>Version control for teamwork</li>
+    <li>Role-based access control</li>
+    <li>Shared workspace organization</li>
+  </ul>
 </div>
     </div>
   )

@@ -52,7 +52,7 @@ const Sidebar = () => {
 
 
           <Link href={'/profile'}>
-          <div className={clsx("p-3 bg-white rounded-lg flex gap-1.5 shodow-sm hover:bg-gray-200 cursor-pointer", pathname === '/profile' ? "bg-transparent border-2 border-blue-500" : "bg-white")}>
+          <div className={clsx("p-3 bg-blue-500 rounded-lg flex gap-1.5 shodow-sm hover:bg-blue-400 cursor-pointer", pathname === '/profile' ? " border-2 bg-blue-500 text-white" : "bg-white")}>
            <UserPen size={19}/> Profile
           </div>
           </Link>
