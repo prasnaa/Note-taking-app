@@ -3,7 +3,7 @@ import { Tags, Trash2} from "lucide-react";
 
 const NoteCard = () => {
   return (
-    <div className="w-65 sm:w-70 bg-gray-200 rounded-xl overflow-hidden shadow-sm">
+    <div className="w-65 sm:w-70 bg-gray-200 rounded-xl overflow-hidden shadow-sm ml-8">
       <div className="p-4 space-y-4">
         <h3 className="text-lg font-semibold text-gray-900 mb-3">Untitled Note</h3>
         <p className="text-gray-700 mb-6">.....</p>
