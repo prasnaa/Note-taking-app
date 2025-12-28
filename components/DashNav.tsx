@@ -1,5 +1,6 @@
 import React from 'react'
 import { Bell, Plus } from 'lucide-react'
+import Link from 'next/link'
 
 
 
@@ -13,7 +14,7 @@ const DashNav = () => {
        </div>
            <div className=" space-x-100">
   
-           <Bell size={30} color="blue" className="cursor-pointer"/>
+           <Bell size={30} color="blue" className="cursor-pointer "/>
           </div>
   
      </div>
@@ -29,7 +30,10 @@ const DashNav = () => {
              <div className="flex space-x-4   ">
                 <div className="flex space-x-100 "></div>
                   <button className=" lg:hidden bg-blue-500 text-white py-2 px-4 mt-0.5 rounded-2xl hover:bg-blue-600"><Plus/></button>
-                  <button className=" hidden lg:block bg-blue-500 text-white py-2 px-4 mt-0.5 rounded-2xl hover:bg-blue-600">Create New Note</button>
+                 <Link href={'/tempnot'}>
+                    <button className=" hidden lg:block bg-blue-500 text-white py-2 px-4 mt-0.5 rounded-2xl hover:bg-blue-600">
+                      Create New Note</button>
+                 </Link>
                   <select className="p-2 bg-gray-200 rounded-2xl hover:bg-gray-300">
                   <option>Sort by Priority</option>
                   <option>Sort by Title</option>

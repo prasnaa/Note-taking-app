@@ -1,11 +1,14 @@
 import React from "react";
 import { Tags, Trash2} from "lucide-react";
+import Link from "next/link";
 
 const NoteCard = () => {
   return (
     <div className="w-65 sm:w-70 bg-gray-200 rounded-xl overflow-hidden shadow-sm ml-8">
       <div className="p-4 space-y-4">
+        <Link href={'/tempnot'}>
         <h3 className="text-lg font-semibold text-gray-900 mb-3">Untitled Note</h3>
+        </Link>
         <p className="text-gray-700 mb-6">.....</p>
 
         {/* Tag,priority and trashicon */}

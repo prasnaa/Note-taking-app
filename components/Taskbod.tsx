@@ -24,7 +24,7 @@ const Taskbod = () => {
           </div>
 
           <div className="flex flex-col items-end">
-            <Bell size={30} color="blue" className="cursor-pointer" />
+            <Bell size={30} color="blue" className="cursor-pointer text-gray-700 group-hover:text-blue-600 transition-colors" />
 
       <button
         className="hidden lg:block bg-blue-500 text-white py-2 px-5 mt-4 rounded-2xl hover:bg-blue-600"
