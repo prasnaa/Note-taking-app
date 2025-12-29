@@ -1,5 +1,5 @@
-import TempFooter from '@/components/TempFooter'
-import TempHeader from '@/components/TempHeader'
+import TempFooter from '@/components/TemplFooter'
+import TempHeader from '@/components/TemplHeader'
 import React from 'react'
 
 const layout = ({ children }: { children: React.ReactNode }) => {

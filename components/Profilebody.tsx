@@ -26,7 +26,7 @@ const Profilebody = () => {
               </div>
               <div>
                 <p className='font-medium text-gray-800'>John Doe</p>
-                <p className='text-sm text-gray-500'>Click camera to update photo</p>
+                <p className='text-sm text-gray-500'>Los Angeles, USA</p>
               </div>
             </div>
             <button className='px-6 py-2 bg-blue-500 text-white text-sm font-medium rounded-lg hover:bg-blue-600'>

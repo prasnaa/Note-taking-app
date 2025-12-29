@@ -10,8 +10,8 @@ const collaboration = () => {
       <header id="title">
         <div>
           <div className="flex items-center gap-2 mb-4 mt-4">
-            <CircleArrowLeft size={20} className="cursor-pointer" />
-            <span className="text-sm">Back</span>
+            <CircleArrowLeft size={20} className="cursor-pointer hover:text-blue-600 transition-colors" />
+            
           </div>
 
           <h1 className="text-lg font-semibold">Collaboration</h1>

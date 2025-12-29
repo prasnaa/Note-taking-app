@@ -12,7 +12,7 @@ const Settingcard = () => {
       {/* Header */}
       <div className=" w-full max-w-4xl mx-auto px-6 py-8">
         <div className="flex items-center justify-between mb-8">
-          <CircleArrowLeft size={24} className="cursor-pointer text-gray-700 hover:text-blue-600 transition-colors" />
+          <CircleArrowLeft size={22} className="cursor-pointer text-gray-700 hover:text-blue-600 transition-colors" />
           <div className="relative">
             <Bell size={24} className="cursor-pointer text-gray-700 hover:text-blue-600 transition-colors" />
             <span className="absolute -top-1 -right-1 w-2 h-2 bg-blue-500 rounded-full"></span>
@@ -21,16 +21,16 @@ const Settingcard = () => {
         
         <div className="mb-10">
           <h1 className="text-2xl font-bold text-gray-900 mb-2">Settings</h1>
-          <p className="text-gray-600">Manage security, privacy and sync preferences</p>
+          <p className="text-gray-600 px-2">Manage security, privacy and sync preferences</p>
         </div>
 
         {/* Security and Privacy Card */}
         <div className="bg-white rounded-2xl shadow-lg border border-gray-100 p-5 mb-5 hover:shadow-xl transition-shadow">
           <div className="flex items-center gap-3 mb-6">
             <div className="p-2 bg-blue-100 rounded-lg">
-              <ShieldCheck size={24} className="text-blue-500" />
+              <ShieldCheck size={22} className="text-blue-500" />
             </div>
-            <h2 className="text-xl font-bold text-gray-800">Security & Privacy</h2>
+            <h2 className="text-lg font-bold text-gray-800">Security & Privacy</h2>
           </div>
 
           <div className="space-y-4">
@@ -82,9 +82,9 @@ const Settingcard = () => {
         <div className="bg-white rounded-2xl shadow-lg border border-gray-100 p-5 mb-5 hover:shadow-xl transition-shadow">
           <div className="flex items-center gap-3 mb-6">
             <div className="p-2 bg-blue-100 rounded-lg">
-              <Cloud size={24} className="text-blue-500" />
+              <Cloud size={22} className="text-blue-500" />
             </div>
-            <h2 className="text-xl font-bold text-gray-900">Cloud & Sync</h2>
+            <h2 className="text-xl font-semibold text-gray-900">Cloud & Sync</h2>
           </div>
 
           <div className="space-y-3">
@@ -149,9 +149,9 @@ const Settingcard = () => {
         <div className="bg-white rounded-2xl shadow-lg border border-gray-100 p-5 mb-5 hover:shadow-xl transition-shadow">
           <div className="flex items-center gap-3 mb-6">
             <div className="p-2 bg-blue-100 rounded-lg">
-              <Database size={24} className="text-blue-500" />
+              <Database size={22} className="text-blue-500" />
             </div>
-            <h2 className="text-xl font-bold text-gray-900">Data Management</h2>
+            <h2 className="text-xl font-semibold text-gray-900">Data Management</h2>
           </div>
 
           <div className="space-y-3">
@@ -183,7 +183,7 @@ const Settingcard = () => {
         {/* Info Card */}
         <div className="bg-linear-to-r from-blue-500 to-blue-600 rounded-2xl shadow-lg p-8 text-white">
           <div className="flex items-start gap-4">
-            <Shield size={32} className="flex-shrink-2 mt-1" />
+            <Shield size={34} className="flex-shrink-2 mt-1" />
             <div>
               <h3 className="text-xl font-bold mb-2">Your Data is Secure</h3>
               <p className="text-blue-100 leading-relaxed">

@@ -14,9 +14,9 @@ const TempHeader = () => {
       <div className="flex items-center justify-between">
 
         {/* back button */}
-        <button className="flex items-center gap-2 text-gray-700 hover:text-blue-600">
+        <button className="flex items-center gap-2 text-gray-700 hover:text-blue-600 ">
           <CircleArrowLeft size={20} />
-          <span className="text-sm font-medium">Back</span>
+          <span className="text-sm font-medium ">Back</span>
         </button>
 
         {/* right buttons */}

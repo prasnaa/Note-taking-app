@@ -9,18 +9,18 @@ const DashNav = () => {
     <div className='  mt-6 mb-8 container mx-auto px-2'>
      <div className='flex justify-between items-center px-1.5'>
        <div>
-          <h1>Welcome back, User</h1>
-             <p>You have 0 note and 0 pending tasks</p>
+          <h1 className='font-semibold px-3'>Welcome back, User</h1>
+             <p className='text-gray-600 px-6'>You have 0 note and 0 pending tasks</p>
        </div>
            <div className=" space-x-100">
   
-           <Bell size={30} color="blue" className="cursor-pointer "/>
+           <Bell size={40} color="blue" className="cursor-pointer p-2 rounded-full bg-white shadow-md group-hover:shadow-lg transition-all"/>
           </div>
   
      </div>
 
 
-          <div className="mt-4 w-full">
+          <div className="mt-4 w-full p-2">
        <div className='max-w-full flex flex-col gap-2 sm:gap-4 md:gap-6 lg:flex-row justify-between items-center py-4   '>
             <input
               type="text"

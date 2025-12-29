@@ -62,12 +62,13 @@ const Tempcd = () => {
         
         {/* back botton use process */}
         <Backbtn/>
+        <CircleArrowLeft size={20} className="text-gray-900  hover:text-blue-600 transition-colors" />
           
-          <h1>Note Templates</h1>
-             <p>Choose a pre-built templates to start quickly</p>
+          <h1 className='font-semibold mt-3'>Note Templates</h1>
+             <p className='px-3 text-gray-500'>Choose a pre-built templates to start quickly</p>
        </div>
-           <div className=" space-x-100">
-           <Bell size={30} color="blue" className="cursor-pointer"/>
+           <div className=" space-x-100 mb-8">
+           <Bell size={40} color="blue" className="cursor-pointer p-2 rounded-full bg-white shadow-md group-hover:shadow-lg transition-all"/>
            </div>
       </div>
 
