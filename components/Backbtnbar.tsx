@@ -7,8 +7,8 @@ import React from 'react'
 const Backbtn = () => { 
     const router = useRouter()
   return (
-    <button onClick={()=>(router.back())}>
-      <CircleArrowLeft size={20} className="cursor-pointer" />
+    <button onClick={()=>(router.push('/'))}>
+      <CircleArrowLeft size={20} className="cursor-pointer hover:text-blue-400 transition-colors" />
     </button>
   )
 }

@@ -5,7 +5,7 @@ const Commentfeatures = () => {
   return (
     <div>
       {/* BOX-3 */}
-  <div className="bg-gray-200 rounded-2xl p-6 h-58 w-xl">
+  <div className="bg-gray-100 shadow-md rounded-2xl p-6 h-58 w-xl ">
   <h3 className="font-medium mb-6 flex gap-2">
   <MessageCircleMore size={18} />Live Comments and Discussion
   </h3>

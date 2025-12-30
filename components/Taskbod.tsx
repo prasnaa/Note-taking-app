@@ -1,10 +1,11 @@
 "use client"
 
 import React from 'react'
-import { CircleArrowLeft, Bell, Link, } from 'lucide-react'
+import { CircleArrowLeft, Bell, } from 'lucide-react'
 import { useRouter } from 'next/navigation'
 import { useState } from 'react'
 import TaskNewForm from './TaskNewForm'
+import Backbtn from './Backbtnbar'
 
 const Taskbod = () => {
   const router = useRouter()
@@ -18,7 +19,8 @@ const Taskbod = () => {
         <div className="flex justify-between items-center mt-6">
           
           <div>
-            <CircleArrowLeft size={20} className='hover:text-blue-600 transition-colors'/>
+            
+            <Backbtn/>
             <h1 className='mt-5 font-semibold'>Task Reminder</h1>
             <p className='px-3 text-gray-600'>You have 0 note creations and 0 pending tasks</p>
           </div>
@@ -28,7 +30,7 @@ const Taskbod = () => {
             p-2 rounded-full bg-white shadow-md group-hover:shadow-lg transition-all mb-3" />
 
       <button
-        className="hidden lg:block bg-blue-500 text-white py-2 px-5 mt-4 rounded-2xl hover:bg-blue-600"
+        className="hidden lg:block bg-blue-500 text-white py-2 px-5 mt-4 rounded-2xl hover:bg-blue-600 cursor-pointer"
         onClick={() => setShowform(!showform)
 
   

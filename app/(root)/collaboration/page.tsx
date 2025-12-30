@@ -2,6 +2,7 @@ import ShareWorkSpace from '@/components/share-components'
 import React, { Suspense } from 'react'
 import { CircleArrowLeft } from 'lucide-react'
 import Commentfeatures from '@/components/comments-features'
+import Backbtn from '@/components/Backbtnbar'
 
 
 const collaboration = () => {
@@ -10,7 +11,7 @@ const collaboration = () => {
       <header id="title">
         <div>
           <div className="flex items-center gap-2 mb-4 mt-4">
-            <CircleArrowLeft size={20} className="cursor-pointer hover:text-blue-600 transition-colors" />
+            <Backbtn/>
             
           </div>
 

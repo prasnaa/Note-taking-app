@@ -7,11 +7,11 @@ const ShareWorkSpace = () => {
 
      {/* shared workspace */}
       <div className="bg-blue-50 rounded-2xl p-6 shadow-md">
-        <h2 className="text-2xl font-semibold text-blue-700 mb-6">Shared Workspace</h2>
+        <h2 className="text-2xl font-semibold text-blue-700 mb-6 ">Shared Workspace</h2>
 
         <div className="flex flex-col md:flex-row gap-4 md:items-center">
           <Dialog>
-            <DialogTrigger className="bg-blue-500 text-white px-5 py-2 rounded-lg hover:bg-blue-600 transition-all ">
+            <DialogTrigger className="bg-blue-500 text-white px-5 py-2 rounded-lg hover:bg-blue-600 transition-all cursor-pointer">
               Invite
             </DialogTrigger>
             <DialogContent className="bg-white rounded-xl p-6 shadow-lg">

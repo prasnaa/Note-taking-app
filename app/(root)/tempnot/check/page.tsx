@@ -1,12 +1,134 @@
-import React from 'react'
+'use client'
+
+import React, { useRef, useState, useEffect } from 'react'
+import { Pencil, Eraser, Minus, Circle, Square, RotateCcw, RotateCw, Trash2, Save, Download } from 'lucide-react'
 
 const Draw = () => {
-  return (
-    <div>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis tenetur distinctio deleniti commodi corrupti minus cumque ipsum libero minima? Consectetur neque in quibusdam corrupti dolor quisquam culpa non recusandae error. Quod unde ipsum ipsa consequuntur obcaecati eos saepe corrupti nam impedit. A reprehenderit omnis laboriosam doloribus dolorem. Ex quasi, nobis cupiditate necessitatibus eveniet odio animi fuga qui aliquid numquam temporibus est? Voluptatum molestias harum nisi dolorum, maiores sapiente, ad rerum, sunt amet suscipit tenetur deserunt eligendi optio numquam nobis omnis aliquid! Modi, ab quisquam, voluptas omnis molestias aspernatur consequatur, at eum expedita molestiae repudiandae architecto rem corporis beatae necessitatibus fugiat eaque odit animi quaerat facilis! Quam, inventore similique deleniti nam eveniet iusto, dicta voluptates atque itaque neque facere earum. Temporibus, cumque blanditiis doloribus dolore expedita quam mollitia, fugiat nemo quis sunt quo dolorem unde tenetur nisi rerum illum non reiciendis fugit nam libero? Molestiae, voluptate. Quaerat voluptatum recusandae rerum quisquam illo tenetur, earum a explicabo illum libero quas inventore, harum commodi ut asperiores! Perferendis, explicabo, quasi dignissimos, earum quam quos quidem aperiam nulla molestias placeat doloremque repellat nemo laudantium voluptatibus accusamus quo rem quibusdam sunt! Asperiores minima nobis dicta commodi et! Cupiditate quod facilis ullam vel voluptate libero soluta quae possimus dolores. Sit ullam nesciunt unde dolorem sed laudantium, provident nostrum vero nisi? Eos beatae qus vitae sapiente nulla tempore non. Fuga explicabo ipsum temporibus totam modi. Facere voluptatum fuga in delectus, aspernatur optio modi repellendus illo exercitationem qui molestias suscipit tempore maiores a ut obcaecati laborum quibusdam, quisquam veniam ullam dignissimos sint. Debitis consequuntur vero nemo voluptates velit itaque voluptatibus culpa reprehenderit quo accusamus. Earum cumque fuga, doloremque vitae repellat veritatis placeat saepe.
+  const canvasRef = useRef<HTMLCanvasElement | null>(null)
+  const containerRef = useRef<HTMLDivElement | null>(null)
+  const [isDrawing, setIsDrawing] = useState(false)
+  const [color, setColor] = useState('#000000')
+  const [size, setSize] = useState(2)
 
-      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae aperiam illum deserunt in non aspernatur, harum, labore libero minima veniam, a quas omnis et ipsam velit deleniti eum commodi voluptatem. Autem illo officia voluptates voluptatibus maxime voluptate aliquam doloribus dignissimos fugit eaque, perferendis distinctio enim tenetur aut consectetur ratione dolorem quis voluptatem? Dolores omnis nam enim blanditiis repellat eaque animi neque officia explicabo? Numquam enim, dolor ratione maxime iste porro iusto nisi, amet voluptatem similique, consequuntur repellendus. A dolor dolores, numquam quidem nostrum eaque deserunt rem sunt corporis culpa labore quae consequatur expedita, impedit animi illum tempore veniam voluptate! Et corrupti tempore fugiat eveniet fuga? Neque officiis sit aperiam hic dolore dolorem ab sed fuga inventore. Eveniet consequatur repellendus odio dicta neque itaque optio dolorum autem, at nesciunt. Sit illum provident eligendi deserunt quod aperiam consequuntur non quas nulla, sequi dolores nisi rerum minima molestiae corrupti ab sunt eum alias pariatur harum! Unde ipsa laborum exercitationem quam cupiditate odio sed similique pariatur perferendis reprehenderit, eligendi repellendus sequi suscipit tempora dolor nulla sint quaerat, incidunt nesciunt! Nulla, tempora, perferendis neque cupiditate dolore nemo corrupti asperiores incidunt architecto quia quo a vitae pariatur debitis non nisi harum aliquid. Neque, placeat eligendi natus, fuga impedit possimus aspernatur consectetur tenetur laborum eius dolorum veniam cumque nesciunt beatae, illum sed pariatur est? Placeat exercitationem ut sunt est tempore excepturi doloremque nobis doloribus voluptatem quod error aliquid, numquam labore temporibus sint similique amet voluptas. Voluptatem sit eos reiciendis eaque incidunt non quibusdam? Veniam atque nostrum ab quaerat maiores quibusdam illum omnis ipsum! Inventore pariatur aliquam error! Ullam adipisci laudantium vero debitis repellendus vitae voluptas consequuntur illo ut eveniet, deserunt officiis aliquam amet quo voluptatum excepturi nisi, eligendi numquam quos illum et beatae. Doloribus minima, aliquid blanditiis architecto odit non quibusdam magnam asperiores impedit adipisci, autem vitae dolorum recusandae, corrupti voluptatum perferendis in quos similique inventore? Labore iusto atque dolorum sequi libero nulla, harum quas laborum quasi cumque beatae eaque reiciendis laboriosam itaque, tempore ea? Dolor, illo, veniam dolorem iure eligendi deserunt provident totam mollitia consectetur unde quaerat! Quas error perspiciatis aspernatur praesentium laborum ducimus. Voluptatem natus, nam error eos quis ab sunt esse. Quos molestias architecto rem ducimus. Veniam laudantium quam beatae nemo quas ea odio magni, illum ex deserunt voluptate iusto labore adipisci odit aperiam pariatur suscipit sunt illo perspiciatis quia a iste neque sed hic? Earum architecto officiis tenetur sint, sed nulla suscipit, quisquam ea amet distinctio ducimus quasi qui pariatur labore perferendis dolores praesentium saepe? Libero voluptatibus non harum ullam sint quidem minus. Quos enim consectetur nesciunt beatae suscipit facilis ipsa aperiam unde odio maiores reprehenderit sapiente a eligendi nobis sint cumque illum atque sit eius ea minus, quidem quis officiis itaque. Ducimus, molestias? Doloribus laboriosam officiis natus quaerat? Voluptatibus rem ut natus nulla quam rerum, libero consequuntur perspiciatis officiis ullam sit explicabo reiciendis. Eum libero, temporibus eveniet non facere, placeat nulla tempore error enim magnam explicabo, incidunt ipsam dolor natus cum saepe illum expedita omnis repellat quod quia? Laudantium enim, animi velit beatae perspiciatis, cupiditate nesciunt illo ut at dicta consequatur incidunt sunt omnis molestias optio doloremque placeat sequi rem. Magni odit veniam nostrum sint optio autem ad porro? Optio sunt repellat tempora iusto totam doloribus recusandae nobis dicta pariatur maiores, reiciendis quibusdam vero libero possimus incidunt ipsa accusantium voluptatum, quae sed iste in! Optio, sed. Animi sit eligendi accusamus quas ullam fuga illo, beatae ut dignissimos amet sunt consequatur totam rem! Laboriosam iste impedit commodi nam tempora necessitatibus beatae consectetur vero expedita ratione voluptatum iusto placeat consequuntur omnis illum rerum, recusandae architecto libero atque illo quos quisquam id rem sapiente? Rerum!
+  // Function to resize canvas dynamically
+  const resizeCanvas = () => {
+    const canvas = canvasRef.current
+    const container = containerRef.current
+    if (!canvas || !container) return
+
+    // Save current drawing
+    const ctx = canvas.getContext('2d')
+    if (!ctx) return
+    const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height)
+
+    // Resize canvas
+    canvas.width = container.offsetWidth
+    canvas.height = window.innerHeight * 0.5 // 50% of viewport height
+
+    // Restore drawing
+    ctx.putImageData(imageData, 0, 0)
+  }
+
+  // Resize canvas on mount and window resize
+  useEffect(() => {
+    resizeCanvas()
+    window.addEventListener('resize', resizeCanvas)
+    return () => window.removeEventListener('resize', resizeCanvas)
+  }, [])
+
+  const startDrawing = (e: React.MouseEvent<HTMLCanvasElement>) => {
+    const canvas = canvasRef.current
+    if (!canvas) return
+    const ctx = canvas.getContext('2d')
+    if (!ctx) return
+
+    ctx.beginPath()
+    ctx.moveTo(e.nativeEvent.offsetX, e.nativeEvent.offsetY)
+    ctx.strokeStyle = color
+    ctx.lineWidth = size
+    ctx.lineCap = 'round'
+    setIsDrawing(true)
+  }
+
+  const draw = (e: React.MouseEvent<HTMLCanvasElement>) => {
+    if (!isDrawing) return
+    const canvas = canvasRef.current
+    if (!canvas) return
+    const ctx = canvas.getContext('2d')
+    if (!ctx) return
+
+    ctx.lineTo(e.nativeEvent.offsetX, e.nativeEvent.offsetY)
+    ctx.stroke()
+  }
+
+  const stopDrawing = () => setIsDrawing(false)
+
+  const clearCanvas = () => {
+    const canvas = canvasRef.current
+    if (!canvas) return
+    const ctx = canvas.getContext('2d')
+    if (!ctx) return
+    ctx.clearRect(0, 0, canvas.width, canvas.height)
+  }
+
+  return (
+    <div className="w-full space-y-4 p-4" ref={containerRef}>
+      {/* Tools */}
+      <div className="w-full bg-gray-100 rounded-xl px-4 py-3 flex flex-wrap items-center justify-between gap-4">
+        <div className="flex items-center gap-2 flex-wrap">
+          <ToolButton active><Pencil size={18} /></ToolButton>
+          <ToolButton><Eraser size={18} /></ToolButton>
+          <ToolButton><Minus size={18} /></ToolButton>
+          <ToolButton><Circle size={18} /></ToolButton>
+          <ToolButton><Square size={18} /></ToolButton>
+
+          <div className="w-px h-6 bg-gray-300 mx-2" />
+
+          <div className="flex items-center gap-2">
+            <span className="text-sm text-gray-700">Color:</span>
+            <input type="color" value={color} onChange={(e) => setColor(e.target.value)} className="w-8 h-8 border rounded-md" />
+          </div>
+
+          <div className="flex items-center gap-2">
+            <span className="text-sm text-gray-700">Size:</span>
+            <input type="range" min="1" max="10" value={size} onChange={(e) => setSize(Number(e.target.value))} className="accent-blue-500" />
+            <span className="text-sm text-gray-700">{size}</span>
+          </div>
+
+          <div className="w-px h-6 bg-gray-300 mx-2" />
+
+          <ToolButton><RotateCcw size={18} /></ToolButton>
+          <ToolButton><RotateCw size={18} /></ToolButton>
+          <ToolButton danger onClick={clearCanvas}><Trash2 size={18} /></ToolButton>
+        </div>
+
+        <div className="flex items-center gap-3 flex-wrap">
+          <button className="flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition"><Save size={18} />Save</button>
+          <button className="flex items-center gap-2 bg-gray-700 text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition"><Download size={18} />Download</button>
+        </div>
+      </div>
+
+      {/* Canvas */}
+      <canvas
+        ref={canvasRef}
+        className="w-full bg-white rounded-xl border shadow-md cursor-crosshair"
+        onMouseDown={startDrawing}
+        onMouseMove={draw}
+        onMouseUp={stopDrawing}
+        onMouseLeave={stopDrawing}
+      />
     </div>
+  )
+}
+
+function ToolButton({ children, active = false, danger = false, onClick }: { children: React.ReactNode; active?: boolean; danger?: boolean; onClick?: () => void }) {
+  return (
+    <button
+      onClick={onClick}
+      className={`p-2 rounded-lg border ${active ? 'bg-blue-500 text-white' : 'bg-white text-gray-700'} ${danger ? 'text-red-500 hover:bg-red-100' : 'hover:bg-gray-200'} transition`}
+    >
+      {children}
+    </button>
   )
 }
 

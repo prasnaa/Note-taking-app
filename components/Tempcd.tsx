@@ -1,6 +1,6 @@
 import React from 'react'
 import { Bell, CircleArrowLeft, NotebookText, Languages, ClipboardCheck, Globe } from 'lucide-react'
-import Backbtn from './Backbtn'
+import Backbtn from './Backbtnbar'
 import Link from 'next/link'
 
 
@@ -15,21 +15,21 @@ const cardsdata = [
   {
     id:"Notes",
     title:"Lecture notes",
-    icons: NotebookText,
+    icons: Globe,
     desc:"Use this template to take organized notes during lecture.",
     link:"/tempnot"
   },
   {
     id:"Notes",
     title:"Nepali Language",
-    icons: NotebookText,
+    icons: Languages,
     desc:"Use this template to take organized notes during learning.",
     link:"/tempnot"
   },
   {
     id:"Notes",
     title:"Weekly Goals",
-    icons: NotebookText,
+    icons: ClipboardCheck,
     desc:"Use this template to take organized notes during note keeping.",
     link:"/tempnot"
   },
@@ -62,7 +62,7 @@ const Tempcd = () => {
         
         {/* back botton use process */}
         <Backbtn/>
-        <CircleArrowLeft size={20} className="text-gray-900  hover:text-blue-600 transition-colors" />
+        
           
           <h1 className='font-semibold mt-3'>Note Templates</h1>
              <p className='px-3 text-gray-500'>Choose a pre-built templates to start quickly</p>

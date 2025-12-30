@@ -32,7 +32,6 @@ const Profilecrds = () => {
       <h2 className="text-xl sm:text-xl font-bold text-gray-900 mb-2">Your Activity</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
         {cardsdata.map((card) => {
-          const IconComponent = card.icon
           return (
             <div
               key={card.id}

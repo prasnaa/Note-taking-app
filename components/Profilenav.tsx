@@ -1,11 +1,12 @@
 import React from 'react'
 import { CircleArrowLeft, Bell } from 'lucide-react' 
+import Backbtn from './Backbtnbar'
 
 const Profilenav = () => {
   return (
     <div className="flex items-center justify-between mt-3 mx-44 mb-8 sm:mb-10">
       <button className="flex items-center gap-2 text-gray-700 hover:text-blue-600 transition-all duration-200 group">
-        <CircleArrowLeft size={20} className="text-gray-900  hover:text-blue-600 transition-colors" />
+        <Backbtn/>
         
       </button>
       <div className="relative cursor-pointer group">

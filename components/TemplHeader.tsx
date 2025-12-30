@@ -3,54 +3,76 @@ import React, { useState } from 'react'
 import { CircleArrowLeft, Tag, TextCursor, PenTool, BrainCircuit, Download } from 'lucide-react'
 import clsx from 'clsx'
 import Link from 'next/link'
+import TemplNotBackbtn from './TemplNotBackbtn'
 
 const TempHeader = () => {
   const [priority, setPriority] = useState('Medium')
+  const [title, setTitle] = useState('Untitled Note')
+  const [isEditing, setIsEditing] = useState(false)
+
+ 
+
 
   return (
     <div className="bg-white px-6 py-4 border-b">
 
       {/* top bar */}
-      <div className="flex items-center justify-between">
+      <div className="flex flex-wrap items-center justify-between gap-2">
 
         {/* back button */}
         <button className="flex items-center gap-2 text-gray-700 hover:text-blue-600 ">
-          <CircleArrowLeft size={20} />
+          <TemplNotBackbtn/>
           <span className="text-sm font-medium ">Back</span>
         </button>
 
         {/* right buttons */}
-        <div className="flex items-center gap-3">
-          <button className="px-4 py-2 rounded-lg bg-blue-100 text-blue-600 text-sm font-medium flex gap-1">
+        <div className="flex flex-wrap items-center gap-2 sm:gap-3">
+          <button className="px-4 py-2 rounded-lg bg-blue-100 text-blue-600 text-sm font-medium flex gap-1 cursor-pointer">
             <TextCursor size={18} /> Text
           </button>
          <Link href={'/tempnot/check'}>
-            <button className="px-4 py-2 rounded-lg bg-blue-200 text-gray-700 text-sm flex gap-1">
+            <button className="px-4 py-2 rounded-lg bg-blue-200 text-gray-700 text-sm flex gap-1 cursor-pointer">
               <PenTool size={18} /> Drawing
             </button>
          </Link>
-          <button className="px-4 py-2 rounded-lg bg-purple-100 text-purple-600 text-sm flex gap-1">
+          <button className="px-4 py-2 rounded-lg bg-purple-100 text-purple-600 text-sm flex gap-1 cursor-pointer">
             <BrainCircuit size={18} /> AI Summarize
           </button>
-          <button className="px-4 py-2 rounded-lg bg-green-100 text-green-600 text-sm flex gap-1">
+          <button className="px-4 py-2 rounded-lg bg-green-100 text-green-600 text-sm flex gap-1 cursor-pointer">
             <Tag size={18} /> Auto Tag
           </button>
-          <button className="px-5 py-2 rounded-lg bg-blue-600 text-white text-sm font-medium flex gap-1">
+          <button className="px-5 py-2 rounded-lg bg-blue-600 text-white text-sm font-medium flex gap-1 cursor-pointer">
             <Download size={18} /> Save
           </button>
         </div>
       </div>
 
       {/* title */}
-      <h1 className="mt-2 text-2xl font-semibold text-gray-900">
-        Untitled Note
-      </h1>
+      {isEditing ? (
+        <input
+          value={title}
+          onChange={(e) => setTitle(e.target.value)}
+          onBlur={() => setIsEditing(false)}
+          autoFocus
+          className="mt-2 text-2xl font-semibold text-gray-900 border-b border-gray-300 outline-none w-full"
+        />
+      ) : (
+        <h1
+          onClick={() => setIsEditing(true)}
+          className="mt-2 text-2xl font-semibold text-gray-900 cursor-pointer"
+        >
+          {title}
+        </h1>
+      )}
+
+   
+
 
       {/* options row */}
       <div className="mt-4 flex items-center gap-4">
 
         {/* category */}
-        <select className="h-9 px-3 rounded-full border bg-white text-gray-700 text-sm">
+        <select className="h-9 px-3 rounded-full border bg-white text-gray-700 text-sm cursor-pointer">
           <option>General</option>
           <option>Education</option>
           <option>Work</option>
@@ -71,13 +93,13 @@ const TempHeader = () => {
             }
           )}
         >
-          <option value="Low" className=''>Low Priority</option>
+          <option value="Low">Low Priority</option>
           <option value="Medium">Medium Priority</option>
           <option value="High">High Priority</option>
         </select>
 
         {/* tag */}
-        <div className="flex items-center gap-2 text-gray-500 cursor-pointer underline">
+        <div className="flex items-center gap-2 text-gray-500 cursor-pointer underline cursor-pointer">
           <Tag size={18} />
           <span className="text-sm">Add tag...</span>
         </div>

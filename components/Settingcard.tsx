@@ -1,6 +1,7 @@
 "use client"
 import React, { useState } from 'react'
 import { CircleArrowLeft, Bell, ShieldCheck, Cloud, Database, Lock, Key, Shield, Download, Upload, Trash2, FileDown, CheckCircle2 } from 'lucide-react'
+import Backbtn from './Backbtnbar'
 
 const Settingcard = () => {
   const [encryptionEnabled, setEncryptionEnabled] = useState(true)
@@ -12,7 +13,7 @@ const Settingcard = () => {
       {/* Header */}
       <div className=" w-full max-w-4xl mx-auto px-6 py-8">
         <div className="flex items-center justify-between mb-8">
-          <CircleArrowLeft size={22} className="cursor-pointer text-gray-700 hover:text-blue-600 transition-colors" />
+          <Backbtn/>
           <div className="relative">
             <Bell size={24} className="cursor-pointer text-gray-700 hover:text-blue-600 transition-colors" />
             <span className="absolute -top-1 -right-1 w-2 h-2 bg-blue-500 rounded-full"></span>
@@ -39,12 +40,12 @@ const Settingcard = () => {
                 <Lock size={20} className="text-blue-500" />
                 <div>
                   <p className="font-semibold text-gray-900">End-to-End Encryption</p>
-                  <p className="text-sm text-gray-600">Encrypt all notes before syncing</p>
+                  <p className="text-sm text-gray-600 ">Encrypt all notes before syncing</p>
                 </div>
               </div>
               <button
                 onClick={() => setEncryptionEnabled(!encryptionEnabled)}
-                className={`relative w-12 h-6 rounded-full transition-colors ${
+                className={`relative w-12 h-6 rounded-full transition-colors cursor-pointer ${
                   encryptionEnabled ? 'bg-blue-500' : 'bg-gray-300'
                 }`}
               >
@@ -98,7 +99,7 @@ const Settingcard = () => {
               </div>
               <button
                 onClick={() => setAutoBackup(!autoBackup)}
-                className={`relative w-12 h-6 rounded-full transition-colors ${
+                className={`relative w-12 h-6 rounded-full transition-colors cursor-pointer ${
                   autoBackup ? 'bg-blue-500' : 'bg-gray-300'
                 }`}
               >
@@ -120,7 +121,7 @@ const Settingcard = () => {
               </div>
               <button
                 onClick={() => setOfflineMode(!offlineMode)}
-                className={`relative w-12 h-6 rounded-full transition-colors ${
+                className={`relative w-12 h-6 rounded-full transition-colors cursor-pointer ${
                   offlineMode ? 'bg-blue-500' : 'bg-gray-300'
                 }`}
               >
@@ -168,12 +169,12 @@ const Settingcard = () => {
               </div>
             </div>
 
-            <button className="w-full flex items-center justify-center gap-2 px-6 py-4 bg-white border-2 border-gray-300 text-gray-700 font-semibold rounded-xl hover:bg-gray-50 hover:border-gray-400 transition-colors">
+            <button className="w-full flex items-center justify-center gap-2 px-6 py-4 bg-white border-2 border-gray-300 text-gray-700 font-semibold rounded-xl hover:bg-gray-50 hover:border-gray-400 transition-colors cursor-pointer">
               <FileDown size={20} />
               Export All Notes
             </button>
 
-            <button className="w-full flex items-center justify-center gap-2 px-6 py-4 bg-white border-2 border-red-300 text-red-600 font-semibold rounded-xl hover:bg-red-50 hover:border-red-400 transition-colors">
+            <button className="w-full flex items-center justify-center gap-2 px-6 py-4 bg-white border-2 border-red-300 text-red-600 font-semibold rounded-xl hover:bg-red-50 hover:border-red-400 transition-colors cursor-pointer">
               <Trash2 size={20} />
               Clear All Data
             </button>

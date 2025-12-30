@@ -29,7 +29,7 @@ const Profilebody = () => {
                 <p className='text-sm text-gray-500'>Los Angeles, USA</p>
               </div>
             </div>
-            <button className='px-6 py-2 bg-blue-500 text-white text-sm font-medium rounded-lg hover:bg-blue-600'>
+            <button className='px-6 py-2 bg-blue-500 text-white text-sm font-medium rounded-lg hover:bg-blue-600 cursor-pointer'>
               Edit Profile
             </button>
           </div>
@@ -120,18 +120,13 @@ const Profilebody = () => {
 
           {/* savebutton*/}
           <div className='flex justify-end mt-6 pt-6 border-t border-gray-200'>
-            <button className='px-8 py-2.5 bg-blue-500 text-white text-sm font-medium rounded-lg hover:bg-blue-600'>
+            <button className='px-8 py-2.5 bg-blue-500 text-white text-sm font-medium rounded-lg hover:bg-blue-600 cursor-pointer'>
               Save Changes
             </button>
           </div>
         </div>
 
-        {/* additonalsection */}
-        <div className='bg-white rounded-lg p-6 mt-4 shadow-sm'>
-          <h2 className='text-lg font-semibold text-gray-800 mb-2'>Security & Privacy</h2>
-          <p className='text-sm text-gray-500'>Manage your account security settings</p>
-        </div>
-
+        
       </div>
     </div>
   );
