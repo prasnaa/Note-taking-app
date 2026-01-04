@@ -1,4 +1,4 @@
-import DashNav from '@/components/DashNav'
+
 import Dashboard from './dashboard/page'
 import React from 'react'
 

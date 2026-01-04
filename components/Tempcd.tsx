@@ -1,5 +1,5 @@
 import React from 'react'
-import { Bell, CircleArrowLeft, NotebookText, Languages, ClipboardCheck, Globe } from 'lucide-react'
+import { Bell} from 'lucide-react'
 import Backbtn from './Backbtnbar'
 import Link from 'next/link'
 import cardsdata from '@/lib/data/data'

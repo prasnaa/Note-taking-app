@@ -1,7 +1,7 @@
 'use client'
 import cardsdata from '@/lib/data/data'
 import { useParams } from 'next/navigation'
-import React, { useEffect, useState } from 'react'
+import React, {  useState } from 'react'
 
 const Page = () => {
   const params = useParams()
@@ -9,14 +9,14 @@ const Page = () => {
 
   const note = cardsdata.find((p) => p.id === id)
 
-  const [content, setContent] = useState('')
+  const [content, setContent] = useState(note?.desc || '')
 
   //  run effect only when id changes
-  useEffect(() => {
-    if (note?.desc) {
-      setContent(note.desc)
-    }
-  }, [id])
+  // useEffect(() => {
+  //   if (note?.desc) {
+  //     setContent(note.desc)
+  //   }
+  // }, [id])
 
   return (
     <div className="flex flex-col h-screen">
