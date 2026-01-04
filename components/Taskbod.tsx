@@ -1,7 +1,7 @@
 "use client"
 
 import React from 'react'
-import { CircleArrowLeft, Bell, } from 'lucide-react'
+import {  Bell, } from 'lucide-react'
 import { useRouter } from 'next/navigation'
 import { useState } from 'react'
 import TaskNewForm from './TaskNewForm'

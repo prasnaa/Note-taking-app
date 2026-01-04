@@ -1,6 +1,7 @@
 import React from 'react'
 import { Wallpaper, AudioLines, Camera, Share2, Download } from 'lucide-react'
 
+
 const TempFooter = () => {
   return (
     <div className="bg-white border-t shadow-sm px-8 py-5 ">

@@ -1,6 +1,6 @@
 'use client'
 import React, { useState } from 'react'
-import { CircleArrowLeft, Tag, TextCursor, PenTool, BrainCircuit, Download } from 'lucide-react'
+import {  Tag, TextCursor, PenTool, BrainCircuit, Download } from 'lucide-react'
 import clsx from 'clsx'
 import Link from 'next/link'
 import TemplNotBackbtn from './TemplNotBackbtn'
@@ -22,15 +22,17 @@ const TempHeader = () => {
         {/* back button */}
         <button className="flex items-center gap-2 text-gray-700 hover:text-blue-600 ">
           <TemplNotBackbtn/>
-          <span className="text-sm font-medium ">Back</span>
-        </button>
+          </button>
 
         {/* right buttons */}
         <div className="flex flex-wrap items-center gap-2 sm:gap-3">
+          <Link href={'/tempnot'}>
           <button className="px-4 py-2 rounded-lg bg-blue-100 text-blue-600 text-sm font-medium flex gap-1 cursor-pointer">
             <TextCursor size={18} /> Text
           </button>
-         <Link href={'/tempnot/check'}>
+          </Link>
+
+         <Link href={'/tempnot/sketch'}>
             <button className="px-4 py-2 rounded-lg bg-blue-200 text-gray-700 text-sm flex gap-1 cursor-pointer">
               <PenTool size={18} /> Drawing
             </button>
@@ -99,7 +101,7 @@ const TempHeader = () => {
         </select>
 
         {/* tag */}
-        <div className="flex items-center gap-2 text-gray-500 cursor-pointer underline cursor-pointer">
+        <div className="flex items-center gap-2 text-gray-500 cursor-pointer underline ">
           <Tag size={18} />
           <span className="text-sm">Add tag...</span>
         </div>

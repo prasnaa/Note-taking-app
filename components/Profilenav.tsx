@@ -1,5 +1,5 @@
 import React from 'react'
-import { CircleArrowLeft, Bell } from 'lucide-react' 
+import {  Bell } from 'lucide-react' 
 import Backbtn from './Backbtnbar'
 
 const Profilenav = () => {

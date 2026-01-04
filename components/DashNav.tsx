@@ -17,9 +17,8 @@ const DashNav = () => {
            <Bell size={40} color="blue" className="cursor-pointer p-2 rounded-full bg-white shadow-md group-hover:shadow-lg transition-all"/>
           </div>
   
-     </div>
-
-
+  
+       </div>
           <div className="mt-4 w-full p-2">
        <div className='max-w-full flex flex-col gap-2 sm:gap-4 md:gap-6 lg:flex-row justify-between items-center py-4   '>
             <input
