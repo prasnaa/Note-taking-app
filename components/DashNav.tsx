@@ -29,7 +29,7 @@ const DashNav = () => {
              <div className="flex space-x-4   ">
                 <div className="flex space-x-100 "></div>
                   <button className=" lg:hidden bg-blue-500 text-white py-2 px-4 mt-0.5 rounded-2xl hover:bg-blue-600"><Plus/></button>
-                 <Link href={'/tempnot'}>
+                 <Link href={'/tempnot/9'}>
                     <button className=" hidden lg:block bg-blue-500 text-white py-2 px-4 mt-0.5 rounded-2xl hover:bg-blue-600 cursor-pointer">
                       Create New Note</button>
                  </Link>

@@ -1,11 +1,11 @@
-import { NotebookText, Globe, Languages, ClipboardCheck } from 'lucide-react';
+import { NotebookText, Globe, Languages, ClipboardCheck, Notebook, } from 'lucide-react';
 
 const cardsdata = [
   {
     id: 1,
     title: "Meeting notes",
     icons: NotebookText,
-    desc: "Use this template to take organized notes during meetings.",
+    desc: "Use this template to take organized notes during meetings. ",
   },
   {
     id: 2,
@@ -49,6 +49,14 @@ const cardsdata = [
     icons: ClipboardCheck,
     desc: "Keep track of your tasks with this simple checklist template.",
   },
+ {
+    id: 9,
+    title: "Untitled Note",
+    icons: Notebook,
+    desc: "Start a new note (Supports नेपाली भाषा.............).",
+  },
 ];
+
+
 
 export default cardsdata;
