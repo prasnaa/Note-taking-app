@@ -1,68 +1,80 @@
-//export default function Register() {
+// 'use client'
+import Link from "next/link";
+
+
 export default function Register() {
   return (
-    <div className="flex flex-col items-center justify-center h-screen w-screen bg-white">
+    <div className="min-h-screen flex items-center justify-center bg-blue-50">
+      <div className="bg-white w-full max-w-md p-8 rounded-xl shadow-lg">
 
-      {/* App Title Outside Box */}
-      <h1 className="text-3xl font-bold mb-6">My Note Book</h1>
+        {/* App Title */}
+        <h1 className="text-3xl font-bold text-center mb-2">
+          My Note Book
+        </h1>
+        <p className="text-center text-gray-500 mb-6">
+          Smart Note Taking with Nepali Support
+        </p>
 
-      {/* Main Box */}
-      <div className="border border-gray-300 p-8 rounded-lg w-[500px] space-y-6">
+        {/* Toggle Buttons */}
+        <div className="flex justify-center gap-4 mb-6">
+          <Link href="/login">
+          <button className="px-6 py-2 rounded-lg bg-gray-200 font-semibold text-gray-700">
+            Login
+          </button>
+          </Link>
 
-        {/* Title inside box */}
-        <div className="text-center mb-6">
-          <h1 className="text-2xl font-semibold leading-tight">
-            Smart Note Taking With <br /> Nepali Support
-          </h1>
+          <button className="px-6 py-2 rounded-lg bg-blue-500 text-white font-semibold">
+            Register
+          </button>
         </div>
 
-        {/* Toggle buttons */}
-        <div className="flex justify-center gap-8 mb-6">
-          <button className="bg-gray-300 text-black py-2 px-8 rounded font-semibold">LOGIN</button>
-          <button className="bg-gray-300 text-black py-2 px-8 rounded font-semibold">REGISTER</button>
-        </div>
+        {/* Form */}
+        <form className="space-y-4">
 
-        {/* Form fields */}
-        <form className="flex flex-col gap-6">
-          <div className="flex flex-col">
-            <label className="text-sm font-medium mb-1">Full Name</label>
+          {/* Full Name */}
+          <div>
+            <label className="block mb-1 font-medium">Full Name</label>
             <input
               type="text"
-              placeholder="Enter your Full name"
-              className="p-3 rounded bg-gray-200 placeholder-gray-500"
+              placeholder="Enter your full name"
+              className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
             />
           </div>
 
-          <div className="flex flex-col">
-            <label className="text-sm font-medium mb-1">Email</label>
+          {/* Email */}
+          <div>
+            <label className="block mb-1 font-medium">Email</label>
             <input
               type="email"
-              placeholder="Enter your Email"
-              className="p-3 rounded bg-gray-200 placeholder-gray-500"
+              placeholder="Enter your email"
+              className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
             />
           </div>
 
-          <div className="flex flex-col">
-            <label className="text-sm font-medium mb-1">Password</label>
+          {/* Password */}
+          <div>
+            <label className="block mb-1 font-medium">Password</label>
             <input
               type="password"
-              placeholder="Enter Password"
-              className="p-3 rounded bg-gray-200 placeholder-gray-500"
+              placeholder="Enter your password"
+              className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
             />
           </div>
 
-          <div className="flex flex-col">
-            <label className="text-sm font-medium mb-1">Role</label>
-            <select className="p-3 rounded bg-gray-200">
+          {/* Role */}
+          <div>
+            <label className="block mb-1 font-medium">Role</label>
+            <select className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400">
               <option>Editor</option>
               <option>Viewer</option>
               <option>Admin</option>
             </select>
           </div>
 
+          {/* Submit */}
           <button
             type="submit"
-            className="mt-4 text-black py-3 rounded-2xl bg-blue-500 font-semibold hover:bg-gray-400"
+            className="w-full mt-4 bg-blue-500 text-white py-3 rounded-lg font-semibold hover:bg-blue-600 transition"
           >
             Create Account
           </button>
