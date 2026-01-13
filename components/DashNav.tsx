@@ -1,15 +1,21 @@
-import React from 'react'
+'use client'
+import React, { useEffect, useState } from 'react'
 import { Bell, Plus } from 'lucide-react'
 import Link from 'next/link'
+import { getUser } from '@/lib/auth'
 
 
 
 const DashNav = () => {
+    // const [email, setEmail] = useState<string | null>(null) 
+const user = getUser()
+
   return (
     <div className='  mt-6 mb-8 container mx-auto px-2'>
      <div className='flex justify-between items-center px-1.5'>
        <div>
-          <h1 className='font-semibold px-3'>Welcome back, User</h1>
+          <h1 className='font-semibold px-3'>Welcome back, {user?.email ?? "User"}
+          </h1>
              <p className='text-gray-600 px-6'>You have 0 note and 0 pending tasks</p>
        </div>
            <div className=" space-x-100">
