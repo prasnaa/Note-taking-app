@@ -38,7 +38,7 @@ const Sidebar = () => {
           </Link>
 
           <Link href={'/task'}>
-          <div className={clsx("p-3  rounded-lg flex gap-1.5 shodow-sm hover:bg-blue-400 cursor-pointer", pathname === '/reminder' ? " border-2 bg-blue-500 text-white" : "bg-white")}>
+          <div className={clsx("p-3 bg-blue-500 rounded-lg flex gap-1.5 shodow-sm hover:bg-blue-400 cursor-pointer", pathname === '/reminder' ? " border-2 bg-blue-500 text-white" : "bg-white")}>
            <AlarmClockCheck size={19} /> Task Reminder
           </div>
           </Link>
