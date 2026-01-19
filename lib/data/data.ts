@@ -1,17 +1,20 @@
 import { NotebookText, Globe, Languages, ClipboardCheck, Notebook, } from 'lucide-react';
 
+
 const cardsdata = [
   {
     id: 1,
     title: "Meeting notes",
     icons: NotebookText,
     desc: "Use this template to take organized notes during meetings. ",
+
   },
   {
     id: 2,
     title: "Lecture notes",
     icons: Globe,
     desc: "Use this template to take organized notes during lectures.",
+
   },
   {
     id: 3,

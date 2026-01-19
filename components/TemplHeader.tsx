@@ -25,7 +25,8 @@ const TempHeader = () => {
           </button>
 
         {/* right buttons */}
-        <div className="flex flex-wrap items-center gap-2 sm:gap-3">
+        <div className="flex items-center gap-2 overflow-x-auto max-w-full">
+
           <Link href={'/tempnot/9'}>
           <button className="px-4 py-2 rounded-lg bg-blue-100 text-blue-600 text-sm font-medium flex gap-1 cursor-pointer">
             <TextCursor size={18} /> Text

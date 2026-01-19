@@ -1,56 +1,56 @@
 import React from 'react'
-import { Bell} from 'lucide-react'
+import { Bell, ClipboardCheck, Globe, Languages, NotebookText} from 'lucide-react'
 import Backbtn from './Backbtnbar'
 import Link from 'next/link'
-import cardsdata from '@/lib/data/data'
+// import cardsdata from '@/lib/data/data'
 
 
-// const cardsdata = [
-//   {
-//     id:1,
-//     title:"Meeting notes",
-//     icons: NotebookText,
-//     desc:"Use this template to take organized notes during meetings.",
-//     // link:"/tempnot"
-//   },
-//   {
-//     id:"Notes",
-//     title:"Lecture notes",
-//     icons: Globe,
-//     desc:"Use this template to take organized notes during lecture.",
-//     // link:"/tempnot"
-//   },
-//   {
-//     id:"Notes",
-//     title:"Nepali Language",
-//     icons: Languages,
-//     desc:"Use this template to take organized notes during learning.",
-//     // link:"/tempnot"
-//   },
-//   {
-//     id:"Notes",
-//     title:"Weekly Goals",
-//     icons: ClipboardCheck,
-//     desc:"Use this template to take organized notes during note keeping.",
-//     // link:"/weekly-goals"
-//   },
-//   {
-//     id:"Notes",
-//     title:"Untitled notes",
-//     icons: NotebookText,
-//     desc:"Use this template to take organized notes during meetings.",
-//     // link:"/tempnot"
-//   },
-//   {
-//     id:"Notes",
-//     title:"Untitled notes",
-//     icons: NotebookText,
-//     desc:"Use this template to take organized notes during meetings.",
-//     // link:"/tempnot"
-//   },
+const cardsdata = [
+  {
+    id:1,
+    title:"Meeting notes",
+    icons: NotebookText,
+    desc:"Use this template to take organized notes during meetings.",
+    link:"/tempnot"
+  },
+  {
+    id:"Notes",
+    title:"Lecture notes",
+    icons: Globe,
+    desc:"Use this template to take organized notes during lecture.",
+    // link:"/tempnot"
+  },
+  {
+    id:"Notes",
+    title:"Nepali Language",
+    icons: Languages,
+    desc:"Use this template to take organized notes during learning.",
+    // link:"/tempnot"
+  },
+  {
+    id:"Notes",
+    title:"Weekly Goals",
+    icons: ClipboardCheck,
+    desc:"Use this template to take organized notes during note keeping.",
+    // link:"/weekly-goals"
+  },
+  {
+    id:"Notes",
+    title:"Untitled notes",
+    icons: NotebookText,
+    desc:"Use this template to take organized notes during meetings.",
+    // link:"/tempnot"
+  },
+  {
+    id:"Notes",
+    title:"Untitled notes",
+    icons: NotebookText,
+    desc:"Use this template to take organized notes during meetings.",
+    // link:"/tempnot"
+  },
  
  
-// ]
+]
 
 const Tempcd = () => {
   return (
