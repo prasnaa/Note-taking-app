@@ -136,7 +136,7 @@ const Tempcd = () => {
             </div>
           </div>
           <h3 className="text-sm font-semibold text-slate-700 mb-1">More templates coming soon</h3>
-          <p className="text-xs text-slate-500">We're working on adding more templates to help you be more productive</p>
+          <p className="text-xs text-slate-500">We are working on adding more templates to help you be more productive</p>
         </div>
       </div>
     </div>

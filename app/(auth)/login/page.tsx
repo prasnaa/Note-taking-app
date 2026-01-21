@@ -1,10 +1,12 @@
 'use client'
-
+import { saveUser } from "@/lib/auth"
+import { useRouter } from "next/navigation"
 import Link from "next/link";
 import { useState } from "react";
 import { Mail, Lock, Eye, EyeOff, AlertCircle, NotebookTabs } from "lucide-react";
 
 export default function LoginPage() {
+  const router = useRouter()
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
@@ -36,17 +38,22 @@ export default function LoginPage() {
     }
 
     const strongPasswordRegex =
-      /^(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,}$/;
+      /^(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{11,}$/;
 
     if (!strongPasswordRegex.test(password)) {
       setPasswordError(
-        "Password must be 6+ chars, include uppercase, number & special character"
+        "Password must be 11+ chars, include uppercase, number & special character"
       );
       return;
     }
 
     // save user (replace with your actual function)
+    saveUser({ email, password })
+    router.push("/dashboard")
     // saveUser({ email, password });
+    saveUser({ email, password })
+    alert("Login successful!")
+    router.push("/dashboard")
 
     alert("Login successful!");
     setEmail("");
@@ -55,11 +62,11 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 p-4">
+    <div className="min-h-screen flex items-center justify-center bg-blue-50 via-indigo-50 to-purple-50 p-4">
       <div className="bg-white w-full max-w-md rounded-2xl shadow-2xl border border-slate-200 overflow-hidden">
         
         {/* Header Section */}
-        <div className="bg-gradient-to-r from-blue-600 to-indigo-600 p-8 text-center">
+        <div className="bg-blue-600 to-indigo-600 p-8 text-center">
           <div className="flex justify-center mb-4">
             <div className="p-3 bg-white rounded-2xl shadow-lg">
               <NotebookTabs size={32} className="text-blue-600" strokeWidth={2.5} />
@@ -78,7 +85,7 @@ export default function LoginPage() {
           
           {/* Tab Buttons */}
           <div className="flex gap-3 mb-6">
-            <button className="flex-1 px-6 py-2.5 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold shadow-md transition-all">
+            <button className="flex-1 px-6 py-2.5 rounded-xl bg-blue-600 to-indigo-600 text-white font-semibold shadow-md transition-all">
               Login
             </button>
 
@@ -140,7 +147,7 @@ export default function LoginPage() {
             </div>
             {passwordError && (
               <div className="flex items-start gap-1 mt-2 text-red-600 text-sm">
-                <AlertCircle size={14} className="mt-0.5 flex-shrink-0" />
+                <AlertCircle size={14} className="mt-0.5 shrink-0" />
                 <p>{passwordError}</p>
               </div>
             )}
@@ -148,7 +155,7 @@ export default function LoginPage() {
 
           {/* Login Button */}
           <button
-            className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white py-3 rounded-xl font-semibold shadow-md hover:shadow-lg transition-all duration-200 hover:scale-[1.02]"
+            className="w-full bg-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white py-3 rounded-xl font-semibold shadow-md hover:shadow-lg transition-all duration-200 hover:scale-[1.02]"
             onClick={handleLogin}
           >
             Login
@@ -165,7 +172,7 @@ export default function LoginPage() {
         {/* Footer */}
         <div className="bg-slate-50 px-8 py-4 border-t border-slate-200 text-center">
           <p className="text-xs text-slate-600">
-            Don't have an account?{" "}
+            Don&apos;t have an account?{" "}
             <Link href="/register" className="text-blue-600 font-semibold hover:underline">
               Sign up now
             </Link>

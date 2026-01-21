@@ -2,20 +2,20 @@
 
 import React, { useEffect, useState } from 'react'
 import { Bell, Plus, Search, SlidersHorizontal } from 'lucide-react'
-import { get } from 'http'
+
 import { getUser } from '@/lib/auth'
 import Link from 'next/link'
 
 const DashNav = () => {
   const [email, setEmail] = useState<string | null>(null)
-  const [notificationCount, setNotificationCount] = useState(3)
+  const [notificationCount] = useState(3)
 
   useEffect(() => {
     if (typeof window !== "undefined") {
       // Simulating getUser - replace with your actual function
       const user = getUser()
       if (user) {
-        setTimeout(() => setEmail(user.email), 0)
+        setEmail(user.email)
       }
     }
   }, [])

@@ -1,6 +1,6 @@
 'use client'
 import React, { useState } from 'react'
-import { Tag, TextCursor, PenTool, BrainCircuit, Download, CircleArrowLeftIcon, Plus, X } from 'lucide-react'
+import { Tag, TextCursor, PenTool, BrainCircuit, Download,  Plus, X } from 'lucide-react'
 import Link from 'next/link'
 import Backbtn from './Backbtnbar'
 
